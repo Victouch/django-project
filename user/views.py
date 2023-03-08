@@ -13,9 +13,9 @@ def register(request):
             messages.success(request, "Registration successful.")
             return redirect("user:login")
         
-        else:
-            form = RegisterForm()
-        context = {
-            "form": form,
-        }
-        return render(request, "user/register.html", context)
+    else:
+        form = RegisterForm()
+    context = {
+        "form": form,
+    }
+    return render(request, "user/register.html", context)
