@@ -182,7 +182,7 @@ a:focus {
   display: flex;
   background:none;
   width: 160px;
-  padding: 5px;
+  padding: 4px;
   text-align: center;
   border: 2px solid #ffffff;
   -webkit-box-align: center;
@@ -195,7 +195,7 @@ a:focus {
   color: hsl(186, 94%, 55%);
   background:none;
   width: 160px;
-  padding: 6px;
+  padding: 5px;
   text-align: center;
   border: 2px solid #10e7f4;
   
