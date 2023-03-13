@@ -141,19 +141,17 @@
                     {% endfor %}         
                 </ul>     
                 {% endif %}               
-                <form method="POST">         
-                    {% csrf_token %} 
-                 {% for field in form %}              
-                 <p>                 
-                    {{ field.label_tag }}<br>                  
-                    {{ field }}                  
-                    {% for error in field.errors %}              
-                    <p style="color: red">{{ error }}</p>                  
-                    {% endfor %}              
-                 </p>         
-                {% endfor %} 
-                 <button type="submit">Login</button>     
-                </form>          
+                <form>
+                    <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Username</label>
+                      <input type="text" class="form-control" name="username" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Password</label>
+                      <input type="password" class="form-control" name="password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>         
                 <p>If you don't have an account, <a href="/register">Register</a> instead.</p> 
             </div> 
         </div>
