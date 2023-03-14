@@ -27,5 +27,9 @@ def login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
+            return redirect("home")
+        else:
+            messages.success(request, ("There was an an error Logging in, Try again..."))
+            return redirect("login")
     else:
         return render(request, "user/login.html", {})
